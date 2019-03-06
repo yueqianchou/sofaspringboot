@@ -1,0 +1,29 @@
+server:
+  port: 11880
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: SOFABoot Demo
+  datasource:
+    url: jdbc:mysql://116.62.126.251:12201/autologin?useUnicode=yes&characterEncoding=UTF8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false
+    username: autologin
+    password: autologin@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    prefix: classpath:/templates/
+    mode: LEGACYHTML5
+    cache: false
+  resources:
+    static-locations: classpath:/static,classpath:/public
+mybatis:
+  typeAliasesPackage: com.example.demo.entity
+  mapperLocations: classpath:mapper/*.xml
+
+
+logging:
+    level:
+       com.example.demo.dao : debug
+    path: ./logs
+
+
